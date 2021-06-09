@@ -559,15 +559,11 @@
                :unsigned-int
                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:193:22")
 
-(iffi:defistruct (%imgui::im-gui-payload
-                   :size-reporter
-                   "__claw_sizeof_ImGuiPayload"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiPayload"
-                   :constructor
-                   %imgui::im-gui-payload
-                   :destructor
-                   %imgui::~im-gui-payload)
+(iffi:defistruct (%imgui::im-gui-payload :size-reporter
+                  "__claw_sizeof_ImGuiPayload" :alignment-reporter
+                  "__claw_alignof_ImGuiPayload" :constructor
+                  %imgui::im-gui-payload :destructor
+                  %imgui::~im-gui-payload)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1922:8"
                  (%imgui::data (:pointer :void) :setter
@@ -854,7 +850,7 @@
 
 (iffi:defitype %imgui::va-list
                %imgui::std+--va-list
-               "/usr/lib/clang/11.0.1/include/stdarg.h:14:27")
+               "/usr/lib/clang/11.1.0/include/stdarg.h:14:27")
 
 (iffi:defifun ("__claw__ZN5ImGui11BulletTextVEPKcSt9__va_list"
                %imgui::im-gui+bullet-text-v)
@@ -1080,7 +1076,7 @@
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:483:29"
               (%imgui::label claw-utils:claw-string)
               (%imgui::current-item (:pointer :int))
-              (%imgui::items-getter (:pointer :pointer))
+              (%imgui::items-getter (:pointer :void))
               (%imgui::data (:pointer :void))
               (%imgui::items-count :int)
               (%imgui::popup-max-height-in-items :int))
@@ -1113,13 +1109,10 @@
                  "__claw_alignof_ImVector_float_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_float__Size"
-                              :getter
-                              "__claw_get_ImVector_float__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_float__Size" :getter
+                 "__claw_get_ImVector_float__Size" :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_float__Capacity" :getter
                  "__claw_get_ImVector_float__Capacity" :documentation
@@ -1135,13 +1128,11 @@
                  "__claw_alignof_ImVector_unsigned_short_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_unsigned_short__Size"
-                              :getter
-                              "__claw_get_ImVector_unsigned_short__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_unsigned_short__Size" :getter
+                 "__claw_get_ImVector_unsigned_short__Size"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_unsigned_short__Capacity"
                  :getter
@@ -1214,13 +1205,11 @@
                  "__claw_alignof_ImVector_ImFontGlyph_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImFontGlyph__Size"
-                              :getter
-                              "__claw_get_ImVector_ImFontGlyph__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImFontGlyph__Size" :getter
+                 "__claw_get_ImVector_ImFontGlyph__Size"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImFontGlyph__Capacity" :getter
                  "__claw_get_ImVector_ImFontGlyph__Capacity"
@@ -1429,13 +1418,10 @@
                  "__claw_alignof_ImVector_ImFont__")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImFont___Size"
-                              :getter
-                              "__claw_get_ImVector_ImFont___Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImFont___Size" :getter
+                 "__claw_get_ImVector_ImFont___Size" :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImFont___Capacity" :getter
                  "__claw_get_ImVector_ImFont___Capacity"
@@ -1501,13 +1487,12 @@
                  "__claw_alignof_ImVector_ImFontAtlasCustomRect_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImFontAtlasCustomRect__Size"
-                              :getter
-                              "__claw_get_ImVector_ImFontAtlasCustomRect__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImFontAtlasCustomRect__Size"
+                 :getter
+                 "__claw_get_ImVector_ImFontAtlasCustomRect__Size"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImFontAtlasCustomRect__Capacity"
                  :getter
@@ -1528,13 +1513,11 @@
                  "__claw_alignof_ImVector_ImFontConfig_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImFontConfig__Size"
-                              :getter
-                              "__claw_get_ImVector_ImFontConfig__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImFontConfig__Size" :getter
+                 "__claw_get_ImVector_ImFontConfig__Size"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImFontConfig__Capacity" :getter
                  "__claw_get_ImVector_ImFontConfig__Capacity"
@@ -1657,7 +1640,7 @@
 
 (iffi:defitype %imgui::size-t
                :unsigned-long
-               "/usr/lib/clang/11.0.1/include/stddef.h:46:23")
+               "/usr/lib/clang/11.1.0/include/stddef.h:46:23")
 
 (iffi:defifun ("__claw__ZN5ImGui30DebugCheckVersionAndDataLayoutEPKcmmmmmm"
                %imgui::im-gui+debug-check-version-and-data-layout)
@@ -1953,7 +1936,7 @@
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:625:29")
 
 (iffi:defitype %imgui::im-draw-callback
-               (:pointer :pointer)
+               (:pointer :void)
                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2232:16")
 
 (iffi:defistruct (%imgui::im-draw-cmd :size-reporter
@@ -1997,13 +1980,10 @@
                  "__claw_alignof_ImVector_ImDrawCmd_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImDrawCmd__Size"
-                              :getter
-                              "__claw_get_ImVector_ImDrawCmd__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImDrawCmd__Size" :getter
+                 "__claw_get_ImVector_ImDrawCmd__Size" :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImDrawCmd__Capacity" :getter
                  "__claw_get_ImVector_ImDrawCmd__Capacity"
@@ -2038,13 +2018,11 @@
                  "__claw_alignof_ImVector_ImDrawVert_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImDrawVert__Size"
-                              :getter
-                              "__claw_get_ImVector_ImDrawVert__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImDrawVert__Size" :getter
+                 "__claw_get_ImVector_ImDrawVert__Size"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImDrawVert__Capacity" :getter
                  "__claw_get_ImVector_ImDrawVert__Capacity"
@@ -2074,13 +2052,10 @@
                  "__claw_alignof_ImVector_ImVec4_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImVec4__Size"
-                              :getter
-                              "__claw_get_ImVector_ImVec4__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImVec4__Size" :getter
+                 "__claw_get_ImVector_ImVec4__Size" :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImVec4__Capacity" :getter
                  "__claw_get_ImVector_ImVec4__Capacity"
@@ -2096,13 +2071,10 @@
                  "__claw_alignof_ImVector_void__")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_void___Size"
-                              :getter
-                              "__claw_get_ImVector_void___Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_void___Size" :getter
+                 "__claw_get_ImVector_void___Size" :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_void___Capacity" :getter
                  "__claw_get_ImVector_void___Capacity" :documentation
@@ -2117,13 +2089,10 @@
                  "__claw_alignof_ImVector_ImVec2_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImVec2__Size"
-                              :getter
-                              "__claw_get_ImVector_ImVec2__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImVec2__Size" :getter
+                 "__claw_get_ImVector_ImVec2__Size" :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImVec2__Capacity" :getter
                  "__claw_get_ImVector_ImVec2__Capacity"
@@ -2179,13 +2148,11 @@
                  "__claw_alignof_ImVector_ImDrawChannel_")
                 nil
                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImDrawChannel__Size"
-                              :getter
-                              "__claw_get_ImVector_ImDrawChannel__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImDrawChannel__Size" :getter
+                 "__claw_get_ImVector_ImDrawChannel__Size"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
                 (%imgui::capacity :int :setter
                  "__claw_set_ImVector_ImDrawChannel__Capacity"
                  :getter
@@ -2527,13 +2494,9 @@
                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:199:24")
 
 (iffi:defistruct (%imgui::im-gui-io :size-reporter
-                                    "__claw_sizeof_ImGuiIO"
-                                    :alignment-reporter
-                                    "__claw_alignof_ImGuiIO"
-                                    :constructor
-                                    %imgui::im-gui-io
-                                    :destructor
-                                    %imgui::~im-gui-io)
+                  "__claw_sizeof_ImGuiIO" :alignment-reporter
+                  "__claw_alignof_ImGuiIO" :constructor
+                  %imgui::im-gui-io :destructor %imgui::~im-gui-io)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1740:8"
                  (%imgui::config-flags %imgui::im-gui-config-flags
@@ -2544,10 +2507,6 @@
                   :setter "__claw_set_ImGuiIO_BackendFlags" :getter
                   "__claw_get_ImGuiIO_BackendFlags" :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1747:24")
-                 (%imgui::display-size (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiIO_DisplaySize" :getter
-                  "__claw_get_ImGuiIO_DisplaySize" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1748:17")
                  (%imgui::delta-time :float :setter
                   "__claw_set_ImGuiIO_DeltaTime" :getter
                   "__claw_get_ImGuiIO_DeltaTime" :documentation
@@ -2595,10 +2554,6 @@
                   "__claw_set_ImGuiIO_UserData" :getter
                   "__claw_get_ImGuiIO_UserData" :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1759:17")
-                 (%imgui::fonts (:pointer %imgui::im-font-atlas)
-                  :setter "__claw_set_ImGuiIO_Fonts" :getter
-                  "__claw_get_ImGuiIO_Fonts" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1761:17")
                  (%imgui::font-global-scale :float :setter
                   "__claw_set_ImGuiIO_FontGlobalScale" :getter
                   "__claw_get_ImGuiIO_FontGlobalScale" :documentation
@@ -2608,17 +2563,6 @@
                   "__claw_get_ImGuiIO_FontAllowUserScaling"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1763:17")
-                 (%imgui::font-default (:pointer %imgui::im-font)
-                  :setter "__claw_set_ImGuiIO_FontDefault" :getter
-                  "__claw_get_ImGuiIO_FontDefault" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1764:17")
-                 (%imgui::display-framebuffer-scale
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiIO_DisplayFramebufferScale"
-                  :getter
-                  "__claw_get_ImGuiIO_DisplayFramebufferScale"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1765:17")
                  (%imgui::mouse-draw-cursor :bool :setter
                   "__claw_set_ImGuiIO_MouseDrawCursor" :getter
                   "__claw_get_ImGuiIO_MouseDrawCursor" :documentation
@@ -2695,12 +2639,12 @@
                   "__claw_get_ImGuiIO_BackendLanguageUserData"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1786:17")
-                 (%imgui::get-clipboard-text-fn (:pointer :pointer)
+                 (%imgui::get-clipboard-text-fn (:pointer :void)
                   :setter "__claw_set_ImGuiIO_GetClipboardTextFn"
                   :getter "__claw_get_ImGuiIO_GetClipboardTextFn"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1790:19")
-                 (%imgui::set-clipboard-text-fn (:pointer :pointer)
+                 (%imgui::set-clipboard-text-fn (:pointer :void)
                   :setter "__claw_set_ImGuiIO_SetClipboardTextFn"
                   :getter "__claw_get_ImGuiIO_SetClipboardTextFn"
                   :documentation
@@ -2711,7 +2655,7 @@
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1792:17")
                  (%imgui::ime-set-input-screen-pos-fn
-                  (:pointer :pointer) :setter
+                  (:pointer :void) :setter
                   "__claw_set_ImGuiIO_ImeSetInputScreenPosFn" :getter
                   "__claw_get_ImGuiIO_ImeSetInputScreenPosFn"
                   :documentation
@@ -2720,10 +2664,6 @@
                   "__claw_set_ImGuiIO_ImeWindowHandle" :getter
                   "__claw_get_ImGuiIO_ImeWindowHandle" :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1797:17")
-                 (%imgui::mouse-pos (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiIO_MousePos" :getter
-                  "__claw_get_ImGuiIO_MousePos" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1803:17")
                  (%imgui::mouse-down (:pointer :bool) :setter nil
                   :getter "__claw_get_ImGuiIO_MouseDown"
                   :documentation
@@ -2821,22 +2761,10 @@
                   "__claw_get_ImGuiIO_MetricsActiveAllocations"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1838:17")
-                 (%imgui::mouse-delta (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiIO_MouseDelta" :getter
-                  "__claw_get_ImGuiIO_MouseDelta" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1839:17")
                  (%imgui::key-mods %imgui::im-gui-key-mod-flags
                   :setter "__claw_set_ImGuiIO_KeyMods" :getter
                   "__claw_get_ImGuiIO_KeyMods" :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1845:22")
-                 (%imgui::mouse-pos-prev (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiIO_MousePosPrev" :getter
-                  "__claw_get_ImGuiIO_MousePosPrev" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1846:17")
-                 (%imgui::mouse-clicked-pos
-                  (:pointer %imgui::im-vec2) :setter nil :getter
-                  "__claw_get_ImGuiIO_MouseClickedPos" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1847:17")
                  (%imgui::mouse-clicked-time (:pointer :double)
                   :setter nil :getter
                   "__claw_get_ImGuiIO_MouseClickedTime"
@@ -2874,11 +2802,6 @@
                   "__claw_get_ImGuiIO_MouseDownDurationPrev"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1855:17")
-                 (%imgui::mouse-drag-max-distance-abs
-                  (:pointer %imgui::im-vec2) :setter nil :getter
-                  "__claw_get_ImGuiIO_MouseDragMaxDistanceAbs"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1856:17")
                  (%imgui::mouse-drag-max-distance-sqr
                   (:pointer :float) :setter nil :getter
                   "__claw_get_ImGuiIO_MouseDragMaxDistanceSqr"
@@ -2912,13 +2835,7 @@
                   :setter "__claw_set_ImGuiIO_InputQueueSurrogate"
                   :getter "__claw_get_ImGuiIO_InputQueueSurrogate"
                   :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1863:17")
-                 (%imgui::input-queue-characters
-                  (:pointer %imgui::im-vector<unsigned+short>)
-                  :setter "__claw_set_ImGuiIO_InputQueueCharacters"
-                  :getter "__claw_get_ImGuiIO_InputQueueCharacters"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1864:23"))
+                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1863:17"))
 
 (iffi:defifun ("__claw__ZN5ImGui5GetIOEv" %imgui::im-gui+get-io)
               (:pointer %imgui::im-gui-io)
@@ -2964,40 +2881,17 @@
                :int
                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:186:13")
 
-(iffi:defistruct (%imgui::im-gui-viewport
-                   :size-reporter
-                   "__claw_sizeof_ImGuiViewport"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiViewport"
-                   :constructor
-                   %imgui::im-gui-viewport
-                   :destructor
-                   %imgui::~im-gui-viewport)
+(iffi:defistruct (%imgui::im-gui-viewport :size-reporter
+                  "__claw_sizeof_ImGuiViewport" :alignment-reporter
+                  "__claw_alignof_ImGuiViewport" :constructor
+                  %imgui::im-gui-viewport :destructor
+                  %imgui::~im-gui-viewport)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2757:8"
                  (%imgui::flags %imgui::im-gui-viewport-flags :setter
                   "__claw_set_ImGuiViewport_Flags" :getter
                   "__claw_get_ImGuiViewport_Flags" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2759:25")
-                 (%imgui::pos (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiViewport_Pos" :getter
-                  "__claw_get_ImGuiViewport_Pos" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2760:25")
-                 (%imgui::size (:pointer %imgui::im-vec2)
-                               :setter
-                               "__claw_set_ImGuiViewport_Size"
-                               :getter
-                               "__claw_get_ImGuiViewport_Size"
-                               :documentation
-                               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2761:25")
-                 (%imgui::work-pos (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiViewport_WorkPos" :getter
-                  "__claw_get_ImGuiViewport_WorkPos" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2762:25")
-                 (%imgui::work-size (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiViewport_WorkSize" :getter
-                  "__claw_get_ImGuiViewport_WorkSize" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2763:25"))
+                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2759:25"))
 
 (iffi:defifun ("__claw__ZN5ImGui15GetMainViewportEv"
                %imgui::im-gui+get-main-viewport)
@@ -3057,69 +2951,13 @@
               :float
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:356:29")
 
-(iffi:defistruct (%imgui::im-gui-storage+im-gui-storage-pair
-                  :size-reporter
-                  "__claw_sizeof_ImGuiStorage_ImGuiStoragePair"
-                  :alignment-reporter
-                  "__claw_alignof_ImGuiStorage_ImGuiStoragePair"
-                  :constructor %imgui::im-gui-storage-pair
-                  :destructor %imgui::~im-gui-storage-pair)
+(iffi:defistruct (%imgui::im-gui-storage :size-reporter
+                  "__claw_sizeof_ImGuiStorage" :alignment-reporter
+                  "__claw_alignof_ImGuiStorage" :constructor
+                  %imgui::im-gui-storage :destructor
+                  %imgui::~im-gui-storage)
                  nil
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2091:12"
-                 (%imgui::key %imgui::im-gui-id :setter
-                  "__claw_set_ImGuiStorage_ImGuiStoragePair_key"
-                  :getter
-                  "__claw_get_ImGuiStorage_ImGuiStoragePair_key"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2093:17"))
-
-(iffi:deficlass (%imgui::im-vector<im-gui-storage+im-gui-storage-pair>
-                 :size-reporter
-                 "__claw_sizeof_ImVector_ImGuiStorage_ImGuiStoragePair_"
-                 :alignment-reporter
-                 "__claw_alignof_ImVector_ImGuiStorage_ImGuiStoragePair_")
-                nil
-                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImGuiStorage_ImGuiStoragePair__Size"
-                              :getter
-                              "__claw_get_ImVector_ImGuiStorage_ImGuiStoragePair__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
-                (%imgui::capacity :int :setter
-                 "__claw_set_ImVector_ImGuiStorage_ImGuiStoragePair__Capacity"
-                 :getter
-                 "__claw_get_ImVector_ImGuiStorage_ImGuiStoragePair__Capacity"
-                 :documentation
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1623:25")
-                (%imgui::data
-                 (:pointer
-                  %imgui::im-gui-storage+im-gui-storage-pair)
-                 :setter
-                 "__claw_set_ImVector_ImGuiStorage_ImGuiStoragePair__Data"
-                 :getter
-                 "__claw_get_ImVector_ImGuiStorage_ImGuiStoragePair__Data"
-                 :documentation
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1624:25"))
-
-(iffi:defistruct (%imgui::im-gui-storage
-                   :size-reporter
-                   "__claw_sizeof_ImGuiStorage"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiStorage"
-                   :constructor
-                   %imgui::im-gui-storage
-                   :destructor
-                   %imgui::~im-gui-storage)
-                 nil
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2088:8"
-                 (%imgui::data
-                  (:pointer
-                   %imgui::im-vector<im-gui-storage+im-gui-storage-pair>)
-                  :setter "__claw_set_ImGuiStorage_Data" :getter
-                  "__claw_get_ImGuiStorage_Data" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2100:37"))
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2088:8")
 
 (iffi:defifun ("__claw__ZN5ImGui15GetStateStorageEv"
                %imgui::im-gui+get-state-storage)
@@ -3127,24 +2965,16 @@
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:809:29")
 
 (iffi:defistruct (%imgui::im-gui-style :size-reporter
-                                       "__claw_sizeof_ImGuiStyle"
-                                       :alignment-reporter
-                                       "__claw_alignof_ImGuiStyle"
-                                       :constructor
-                                       %imgui::im-gui-style
-                                       :destructor
-                                       %imgui::~im-gui-style)
+                  "__claw_sizeof_ImGuiStyle" :alignment-reporter
+                  "__claw_alignof_ImGuiStyle" :constructor
+                  %imgui::im-gui-style :destructor
+                  %imgui::~im-gui-style)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1686:8"
                  (%imgui::alpha :float :setter
                   "__claw_set_ImGuiStyle_Alpha" :getter
                   "__claw_get_ImGuiStyle_Alpha" :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1688:17")
-                 (%imgui::window-padding (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiStyle_WindowPadding"
-                  :getter "__claw_get_ImGuiStyle_WindowPadding"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1689:17")
                  (%imgui::window-rounding :float :setter
                   "__claw_set_ImGuiStyle_WindowRounding" :getter
                   "__claw_get_ImGuiStyle_WindowRounding"
@@ -3155,17 +2985,6 @@
                   "__claw_get_ImGuiStyle_WindowBorderSize"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1691:17")
-                 (%imgui::window-min-size (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiStyle_WindowMinSize"
-                  :getter "__claw_get_ImGuiStyle_WindowMinSize"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1692:17")
-                 (%imgui::window-title-align
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiStyle_WindowTitleAlign" :getter
-                  "__claw_get_ImGuiStyle_WindowTitleAlign"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1693:17")
                  (%imgui::window-menu-button-position
                   %imgui::im-gui-dir :setter
                   "__claw_set_ImGuiStyle_WindowMenuButtonPosition"
@@ -3193,11 +3012,6 @@
                   "__claw_get_ImGuiStyle_PopupBorderSize"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1698:17")
-                 (%imgui::frame-padding (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiStyle_FramePadding"
-                  :getter "__claw_get_ImGuiStyle_FramePadding"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1699:17")
                  (%imgui::frame-rounding :float :setter
                   "__claw_set_ImGuiStyle_FrameRounding" :getter
                   "__claw_get_ImGuiStyle_FrameRounding"
@@ -3208,26 +3022,6 @@
                   "__claw_get_ImGuiStyle_FrameBorderSize"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1701:17")
-                 (%imgui::item-spacing (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiStyle_ItemSpacing" :getter
-                  "__claw_get_ImGuiStyle_ItemSpacing" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1702:17")
-                 (%imgui::item-inner-spacing
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiStyle_ItemInnerSpacing" :getter
-                  "__claw_get_ImGuiStyle_ItemInnerSpacing"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1703:17")
-                 (%imgui::cell-padding (:pointer %imgui::im-vec2)
-                  :setter "__claw_set_ImGuiStyle_CellPadding" :getter
-                  "__claw_get_ImGuiStyle_CellPadding" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1704:17")
-                 (%imgui::touch-extra-padding
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiStyle_TouchExtraPadding" :getter
-                  "__claw_get_ImGuiStyle_TouchExtraPadding"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1705:17")
                  (%imgui::indent-spacing :float :setter
                   "__claw_set_ImGuiStyle_IndentSpacing" :getter
                   "__claw_get_ImGuiStyle_IndentSpacing"
@@ -3282,32 +3076,6 @@
                   :getter "__claw_get_ImGuiStyle_ColorButtonPosition"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1716:17")
-                 (%imgui::button-text-align
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiStyle_ButtonTextAlign" :getter
-                  "__claw_get_ImGuiStyle_ButtonTextAlign"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1717:17")
-                 (%imgui::selectable-text-align
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiStyle_SelectableTextAlign" :getter
-                  "__claw_get_ImGuiStyle_SelectableTextAlign"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1718:17")
-                 (%imgui::display-window-padding
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiStyle_DisplayWindowPadding"
-                  :getter
-                  "__claw_get_ImGuiStyle_DisplayWindowPadding"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1719:17")
-                 (%imgui::display-safe-area-padding
-                  (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiStyle_DisplaySafeAreaPadding"
-                  :getter
-                  "__claw_get_ImGuiStyle_DisplaySafeAreaPadding"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1720:17")
                  (%imgui::mouse-cursor-scale :float :setter
                   "__claw_set_ImGuiStyle_MouseCursorScale" :getter
                   "__claw_get_ImGuiStyle_MouseCursorScale"
@@ -3340,11 +3108,7 @@
                   :getter
                   "__claw_get_ImGuiStyle_CircleSegmentMaxError"
                   :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1726:17")
-                 (%imgui::colors (:pointer %imgui::im-vec4) :setter
-                  nil :getter "__claw_get_ImGuiStyle_Colors"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1727:17"))
+                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1726:17"))
 
 (iffi:defifun ("__claw__ZN5ImGui8GetStyleEv"
                %imgui::im-gui+get-style)
@@ -3572,7 +3336,7 @@
               (%imgui::flags %imgui::im-gui-input-text-flags))
 
 (iffi:defitype %imgui::im-gui-input-text-callback
-               (:pointer :pointer)
+               (:pointer :void)
                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:194:15")
 
 (iffi:defifun ("__claw__ZN5ImGui9InputTextEPKcPcmiPFiP26ImGuiInputTextCallbackDataEPv"
@@ -3841,7 +3605,7 @@
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:593:29"
               (%imgui::label claw-utils:claw-string)
               (%imgui::current-item (:pointer :int))
-              (%imgui::items-getter (:pointer :pointer))
+              (%imgui::items-getter (:pointer :void))
               (%imgui::data (:pointer :void))
               (%imgui::items-count :int)
               (%imgui::height-in-items :int))
@@ -3979,7 +3743,7 @@
               :void
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:600:29"
               (%imgui::label claw-utils:claw-string)
-              (%imgui::values-getter (:pointer :pointer))
+              (%imgui::values-getter (:pointer :void))
               (%imgui::data (:pointer :void))
               (%imgui::values-count :int)
               (%imgui::values-offset :int)
@@ -4007,7 +3771,7 @@
               :void
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:598:29"
               (%imgui::label claw-utils:claw-string)
-              (%imgui::values-getter (:pointer :pointer))
+              (%imgui::values-getter (:pointer :void))
               (%imgui::data (:pointer :void))
               (%imgui::values-count :int)
               (%imgui::values-offset :int)
@@ -4236,8 +4000,8 @@
                %imgui::im-gui+set-allocator-functions)
               :void
               "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:872:29"
-              (%imgui::alloc-func (:pointer :pointer))
-              (%imgui::free-func (:pointer :pointer))
+              (%imgui::alloc-func (:pointer :void))
+              (%imgui::free-func (:pointer :void))
               (%imgui::user-data (:pointer :void)))
 
 (iffi:defifun ("__claw__ZN5ImGui16SetClipboardTextEPKc"
@@ -4384,7 +4148,7 @@
               (%imgui::cond %imgui::im-gui-cond))
 
 (iffi:defitype %imgui::im-gui-size-callback
-               (:pointer :pointer)
+               (:pointer :void)
                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:195:16")
 
 (iffi:defifun ("__claw__ZN5ImGui28SetNextWindowSizeConstraintsERK6ImVec2S2_PFvP21ImGuiSizeCallbackDataEPv"
@@ -4788,14 +4552,13 @@
                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:161:13")
 
 (iffi:defistruct (%imgui::im-gui-table-column-sort-specs
-                   :size-reporter
-                   "__claw_sizeof_ImGuiTableColumnSortSpecs"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiTableColumnSortSpecs"
-                   :constructor
-                   %imgui::im-gui-table-column-sort-specs
-                   :destructor
-                   %imgui::~im-gui-table-column-sort-specs)
+                  :size-reporter
+                  "__claw_sizeof_ImGuiTableColumnSortSpecs"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiTableColumnSortSpecs"
+                  :constructor %imgui::im-gui-table-column-sort-specs
+                  :destructor
+                  %imgui::~im-gui-table-column-sort-specs)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1944:8"
                  (%imgui::column-user-id %imgui::im-gui-id :setter
@@ -4824,15 +4587,12 @@
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1949:33"))
 
-(iffi:defistruct (%imgui::im-gui-table-sort-specs
-                   :size-reporter
-                   "__claw_sizeof_ImGuiTableSortSpecs"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiTableSortSpecs"
-                   :constructor
-                   %imgui::im-gui-table-sort-specs
-                   :destructor
-                   %imgui::~im-gui-table-sort-specs)
+(iffi:defistruct (%imgui::im-gui-table-sort-specs :size-reporter
+                  "__claw_sizeof_ImGuiTableSortSpecs"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiTableSortSpecs" :constructor
+                  %imgui::im-gui-table-sort-specs :destructor
+                  %imgui::~im-gui-table-sort-specs)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1958:8"
                  (%imgui::specs
@@ -5181,18 +4941,17 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiIO_claw_dtor"
                %imgui::~im-gui-io)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1740:8"
               (%imgui::%%claw-this- (:pointer %imgui::im-gui-io)))
 
 (iffi:defistruct (%imgui::im-gui-input-text-callback-data
-                   :size-reporter
-                   "__claw_sizeof_ImGuiInputTextCallbackData"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiInputTextCallbackData"
-                   :constructor
-                   %imgui::im-gui-input-text-callback-data
-                   :destructor
-                   %imgui::~im-gui-input-text-callback-data)
+                  :size-reporter
+                  "__claw_sizeof_ImGuiInputTextCallbackData"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiInputTextCallbackData"
+                  :constructor
+                  %imgui::im-gui-input-text-callback-data :destructor
+                  %imgui::~im-gui-input-text-callback-data)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1882:8"
                  (%imgui::event-flag %imgui::im-gui-input-text-flags
@@ -5319,19 +5078,16 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiInputTextCallbackData_claw_dtor"
                %imgui::~im-gui-input-text-callback-data)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1882:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-input-text-callback-data)))
 
-(iffi:defistruct (%imgui::im-gui-list-clipper
-                   :size-reporter
-                   "__claw_sizeof_ImGuiListClipper"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiListClipper"
-                   :constructor
-                   %imgui::im-gui-list-clipper
-                   :destructor
-                   %imgui::~im-gui-list-clipper)
+(iffi:defistruct (%imgui::im-gui-list-clipper :size-reporter
+                  "__claw_sizeof_ImGuiListClipper"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiListClipper" :constructor
+                  %imgui::im-gui-list-clipper :destructor
+                  %imgui::~im-gui-list-clipper)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2148:8"
                  (%imgui::display-start :int :setter
@@ -5412,15 +5168,12 @@
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-list-clipper)))
 
-(iffi:defistruct (%imgui::im-gui-once-upon-a-frame
-                   :size-reporter
-                   "__claw_sizeof_ImGuiOnceUponAFrame"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiOnceUponAFrame"
-                   :constructor
-                   %imgui::im-gui-once-upon-a-frame
-                   :destructor
-                   %imgui::~im-gui-once-upon-a-frame)
+(iffi:defistruct (%imgui::im-gui-once-upon-a-frame :size-reporter
+                  "__claw_sizeof_ImGuiOnceUponAFrame"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiOnceUponAFrame" :constructor
+                  %imgui::im-gui-once-upon-a-frame :destructor
+                  %imgui::~im-gui-once-upon-a-frame)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2026:8"
                  (%imgui::ref-frame :int :setter
@@ -5446,7 +5199,7 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiOnceUponAFrame_claw_dtor"
                %imgui::~im-gui-once-upon-a-frame)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2026:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-once-upon-a-frame)))
 
@@ -5487,57 +5240,35 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiPayload_claw_dtor"
                %imgui::~im-gui-payload)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1922:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-payload)))
 
-(iffi:defistruct (%imgui::im-gui-size-callback-data
-                   :size-reporter
-                   "__claw_sizeof_ImGuiSizeCallbackData"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiSizeCallbackData"
-                   :constructor
-                   %imgui::im-gui-size-callback-data
-                   :destructor
-                   %imgui::~im-gui-size-callback-data)
+(iffi:defistruct (%imgui::im-gui-size-callback-data :size-reporter
+                  "__claw_sizeof_ImGuiSizeCallbackData"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiSizeCallbackData" :constructor
+                  %imgui::im-gui-size-callback-data :destructor
+                  %imgui::~im-gui-size-callback-data)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1913:8"
                  (%imgui::user-data (:pointer :void) :setter
                   "__claw_set_ImGuiSizeCallbackData_UserData" :getter
                   "__claw_get_ImGuiSizeCallbackData_UserData"
                   :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1915:13")
-                 (%imgui::pos (:pointer %imgui::im-vec2) :setter
-                  "__claw_set_ImGuiSizeCallbackData_Pos" :getter
-                  "__claw_get_ImGuiSizeCallbackData_Pos"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1916:13")
-                 (%imgui::current-size (:pointer %imgui::im-vec2)
-                  :setter
-                  "__claw_set_ImGuiSizeCallbackData_CurrentSize"
-                  :getter
-                  "__claw_get_ImGuiSizeCallbackData_CurrentSize"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1917:13")
-                 (%imgui::desired-size (:pointer %imgui::im-vec2)
-                  :setter
-                  "__claw_set_ImGuiSizeCallbackData_DesiredSize"
-                  :getter
-                  "__claw_get_ImGuiSizeCallbackData_DesiredSize"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1918:13"))
+                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1915:13"))
 
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiSizeCallbackData_claw_ctor"
                %imgui::im-gui-size-callback-data)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1913:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-size-callback-data)))
 
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiSizeCallbackData_claw_dtor"
                %imgui::~im-gui-size-callback-data)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1913:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-size-callback-data)))
 
@@ -5668,6 +5399,22 @@
               (%imgui::key %imgui::im-gui-id)
               (%imgui::val (:pointer :void)))
 
+(iffi:defistruct (%imgui::im-gui-storage+im-gui-storage-pair
+                  :size-reporter
+                  "__claw_sizeof_ImGuiStorage_ImGuiStoragePair"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiStorage_ImGuiStoragePair"
+                  :constructor %imgui::im-gui-storage-pair
+                  :destructor %imgui::~im-gui-storage-pair)
+                 nil
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2091:12"
+                 (%imgui::key %imgui::im-gui-id :setter
+                  "__claw_set_ImGuiStorage_ImGuiStoragePair_key"
+                  :getter
+                  "__claw_get_ImGuiStorage_ImGuiStoragePair_key"
+                  :documentation
+                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2093:17"))
+
 (iffi:defifun ("__claw__ZN12ImGuiStorage16ImGuiStoragePairC1EjPv"
                %imgui::im-gui-storage-pair)
               :void
@@ -5698,21 +5445,21 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiStorageE40SE40ImGuiStoragePair_claw_dtor"
                %imgui::~im-gui-storage-pair)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2091:12"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-storage+im-gui-storage-pair)))
 
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiStorage_claw_ctor"
                %imgui::im-gui-storage)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2088:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-storage)))
 
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiStorage_claw_dtor"
                %imgui::~im-gui-storage)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2088:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-storage)))
 
@@ -5731,7 +5478,7 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiStyle_claw_dtor"
                %imgui::~im-gui-style)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1686:8"
               (%imgui::%%claw-this- (:pointer %imgui::im-gui-style)))
 
 (iffi:defifun ("__claw__ZN25ImGuiTableColumnSortSpecsC1Ev"
@@ -5744,7 +5491,7 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiTableColumnSortSpecs_claw_dtor"
                %imgui::~im-gui-table-column-sort-specs)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1944:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-table-column-sort-specs)))
 
@@ -5758,46 +5505,17 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiTableSortSpecs_claw_dtor"
                %imgui::~im-gui-table-sort-specs)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1958:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-table-sort-specs)))
 
-(iffi:deficlass (%imgui::im-vector<char> :size-reporter
-                 "__claw_sizeof_ImVector_char_" :alignment-reporter
-                 "__claw_alignof_ImVector_char_")
-                nil
-                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_char__Size"
-                              :getter
-                              "__claw_get_ImVector_char__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
-                (%imgui::capacity :int :setter
-                 "__claw_set_ImVector_char__Capacity" :getter
-                 "__claw_get_ImVector_char__Capacity" :documentation
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1623:25")
-                (%imgui::data claw-utils:claw-string :setter
-                 "__claw_set_ImVector_char__Data" :getter
-                 "__claw_get_ImVector_char__Data" :documentation
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1624:25"))
-
-(iffi:defistruct (%imgui::im-gui-text-buffer
-                   :size-reporter
-                   "__claw_sizeof_ImGuiTextBuffer"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiTextBuffer"
-                   :constructor
-                   %imgui::im-gui-text-buffer
-                   :destructor
-                   %imgui::~im-gui-text-buffer)
+(iffi:defistruct (%imgui::im-gui-text-buffer :size-reporter
+                  "__claw_sizeof_ImGuiTextBuffer" :alignment-reporter
+                  "__claw_alignof_ImGuiTextBuffer" :constructor
+                  %imgui::im-gui-text-buffer :destructor
+                  %imgui::~im-gui-text-buffer)
                  nil
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2061:8"
-                 (%imgui::buf (:pointer %imgui::im-vector<char>)
-                  :setter "__claw_set_ImGuiTextBuffer_Buf" :getter
-                  "__claw_get_ImGuiTextBuffer_Buf" :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2063:25"))
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2061:8")
 
 (iffi:defifun ("__claw__ZN15ImGuiTextBufferC1Ev"
                %imgui::im-gui-text-buffer)
@@ -5893,84 +5611,21 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiTextBuffer_claw_dtor"
                %imgui::~im-gui-text-buffer)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2061:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-text-buffer)))
 
-(iffi:defistruct (%imgui::im-gui-text-filter+im-gui-text-range
-                  :size-reporter
-                  "__claw_sizeof_ImGuiTextFilter_ImGuiTextRange"
-                  :alignment-reporter
-                  "__claw_alignof_ImGuiTextFilter_ImGuiTextRange"
-                  :constructor %imgui::im-gui-text-range :destructor
-                  %imgui::~im-gui-text-range)
-                 nil
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2044:12"
-                 (%imgui::b claw-utils:claw-string :setter
-                  "__claw_set_ImGuiTextFilter_ImGuiTextRange_b"
-                  :getter
-                  "__claw_get_ImGuiTextFilter_ImGuiTextRange_b"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2046:25")
-                 (%imgui::e claw-utils:claw-string :setter
-                  "__claw_set_ImGuiTextFilter_ImGuiTextRange_e"
-                  :getter
-                  "__claw_get_ImGuiTextFilter_ImGuiTextRange_e"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2047:25"))
-
-(iffi:deficlass (%imgui::im-vector<im-gui-text-filter+im-gui-text-range>
-                 :size-reporter
-                 "__claw_sizeof_ImVector_ImGuiTextFilter_ImGuiTextRange_"
-                 :alignment-reporter
-                 "__claw_alignof_ImVector_ImGuiTextFilter_ImGuiTextRange_")
-                nil
-                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
-                (%imgui::size :int
-                              :setter
-                              "__claw_set_ImVector_ImGuiTextFilter_ImGuiTextRange__Size"
-                              :getter
-                              "__claw_get_ImVector_ImGuiTextFilter_ImGuiTextRange__Size"
-                              :documentation
-                              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
-                (%imgui::capacity :int :setter
-                 "__claw_set_ImVector_ImGuiTextFilter_ImGuiTextRange__Capacity"
-                 :getter
-                 "__claw_get_ImVector_ImGuiTextFilter_ImGuiTextRange__Capacity"
-                 :documentation
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1623:25")
-                (%imgui::data
-                 (:pointer
-                  %imgui::im-gui-text-filter+im-gui-text-range)
-                 :setter
-                 "__claw_set_ImVector_ImGuiTextFilter_ImGuiTextRange__Data"
-                 :getter
-                 "__claw_get_ImVector_ImGuiTextFilter_ImGuiTextRange__Data"
-                 :documentation
-                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1624:25"))
-
-(iffi:defistruct (%imgui::im-gui-text-filter
-                   :size-reporter
-                   "__claw_sizeof_ImGuiTextFilter"
-                   :alignment-reporter
-                   "__claw_alignof_ImGuiTextFilter"
-                   :constructor
-                   %imgui::im-gui-text-filter
-                   :destructor
-                   %imgui::~im-gui-text-filter)
+(iffi:defistruct (%imgui::im-gui-text-filter :size-reporter
+                  "__claw_sizeof_ImGuiTextFilter" :alignment-reporter
+                  "__claw_alignof_ImGuiTextFilter" :constructor
+                  %imgui::im-gui-text-filter :destructor
+                  %imgui::~im-gui-text-filter)
                  nil
                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2034:8"
                  (%imgui::input-buf claw-utils:claw-string :setter
                   nil :getter "__claw_get_ImGuiTextFilter_InputBuf"
                   :documentation
                   "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2054:29")
-                 (%imgui::filters
-                  (:pointer
-                   %imgui::im-vector<im-gui-text-filter+im-gui-text-range>)
-                  :setter "__claw_set_ImGuiTextFilter_Filters"
-                  :getter "__claw_get_ImGuiTextFilter_Filters"
-                  :documentation
-                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2055:29")
                  (%imgui::count-grep :int :setter
                   "__claw_set_ImGuiTextFilter_CountGrep" :getter
                   "__claw_get_ImGuiTextFilter_CountGrep"
@@ -6021,6 +5676,28 @@
               (%imgui::text claw-utils:claw-string)
               (%imgui::text-end claw-utils:claw-string))
 
+(iffi:defistruct (%imgui::im-gui-text-filter+im-gui-text-range
+                  :size-reporter
+                  "__claw_sizeof_ImGuiTextFilter_ImGuiTextRange"
+                  :alignment-reporter
+                  "__claw_alignof_ImGuiTextFilter_ImGuiTextRange"
+                  :constructor %imgui::im-gui-text-range :destructor
+                  %imgui::~im-gui-text-range)
+                 nil
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2044:12"
+                 (%imgui::b claw-utils:claw-string :setter
+                  "__claw_set_ImGuiTextFilter_ImGuiTextRange_b"
+                  :getter
+                  "__claw_get_ImGuiTextFilter_ImGuiTextRange_b"
+                  :documentation
+                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2046:25")
+                 (%imgui::e claw-utils:claw-string :setter
+                  "__claw_set_ImGuiTextFilter_ImGuiTextRange_e"
+                  :getter
+                  "__claw_get_ImGuiTextFilter_ImGuiTextRange_e"
+                  :documentation
+                  "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2047:25"))
+
 (iffi:defifun ("__claw__ZN15ImGuiTextFilter14ImGuiTextRangeC1Ev"
                %imgui::im-gui-text-range)
               :void
@@ -6047,6 +5724,35 @@
                (:pointer
                 %imgui::im-gui-text-filter+im-gui-text-range)))
 
+(iffi:deficlass (%imgui::im-vector<im-gui-text-filter+im-gui-text-range>
+                 :size-reporter
+                 "__claw_sizeof_ImVector_ImGuiTextFilter_ImGuiTextRange_"
+                 :alignment-reporter
+                 "__claw_alignof_ImVector_ImGuiTextFilter_ImGuiTextRange_")
+                nil
+                "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1620:8"
+                (%imgui::size :int :setter
+                 "__claw_set_ImVector_ImGuiTextFilter_ImGuiTextRange__Size"
+                 :getter
+                 "__claw_get_ImVector_ImGuiTextFilter_ImGuiTextRange__Size"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1622:25")
+                (%imgui::capacity :int :setter
+                 "__claw_set_ImVector_ImGuiTextFilter_ImGuiTextRange__Capacity"
+                 :getter
+                 "__claw_get_ImVector_ImGuiTextFilter_ImGuiTextRange__Capacity"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1623:25")
+                (%imgui::data
+                 (:pointer
+                  %imgui::im-gui-text-filter+im-gui-text-range)
+                 :setter
+                 "__claw_set_ImVector_ImGuiTextFilter_ImGuiTextRange__Data"
+                 :getter
+                 "__claw_get_ImVector_ImGuiTextFilter_ImGuiTextRange__Data"
+                 :documentation
+                 "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:1624:25"))
+
 (iffi:defifun ("__claw__ZNK15ImGuiTextFilter14ImGuiTextRange5splitEcP8ImVectorIS0_E"
                %imgui::split :non-mutating t)
               :void
@@ -6062,7 +5768,7 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiTextFilterE40SE40ImGuiTextRange_claw_dtor"
                %imgui::~im-gui-text-range)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2044:12"
               (%imgui::%%claw-this-
                (:pointer
                 %imgui::im-gui-text-filter+im-gui-text-range)))
@@ -6070,7 +5776,7 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiTextFilter_claw_dtor"
                %imgui::~im-gui-text-filter)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2034:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-text-filter)))
 
@@ -6100,7 +5806,7 @@
 (iffi:defifun ("__claw_cE3AE40SE40ImGuiViewport_claw_dtor"
                %imgui::~im-gui-viewport)
               :void
-              "::"
+              "/home/borodust/devel/repo/claw-imgui/src/lib/imgui/imgui.h:2757:8"
               (%imgui::%%claw-this-
                (:pointer %imgui::im-gui-viewport)))
 
@@ -6257,10 +5963,10 @@
 
 (eval-when (:load-toplevel :compile-toplevel :execute)
   (export '%imgui::im-gui+log-text "%IMGUI")
-  (export '%imgui::step-no "%IMGUI")
+  (export '%imgui::~im-gui-text-range "%IMGUI")
   (export '%imgui::mouse-cursor-scale "%IMGUI")
   (export '%imgui::source-id "%IMGUI")
-  (export '%imgui::~im-gui-text-range "%IMGUI")
+  (export '%imgui::pass-filter "%IMGUI")
   (export '%imgui::backend-platform-name "%IMGUI")
   (export '%imgui::nav-active "%IMGUI")
   (export '%imgui::im-gui+new-frame "%IMGUI")
@@ -6279,7 +5985,6 @@
   (export '%imgui::im-gui-nav-input- "%IMGUI")
   (export '%imgui::im-gui+get-style-color-name "%IMGUI")
   (export '%imgui::im-gui+slider-int "%IMGUI")
-  (export '%imgui::im-gui+table-set-column-index "%IMGUI")
   (export '%imgui::im-gui+text-wrapped-v "%IMGUI")
   (export '%imgui::im-gui+checkbox "%IMGUI")
   (export '%imgui::im-gui+set-column-width "%IMGUI")
@@ -6289,12 +5994,10 @@
   (export '%imgui::container-atlas "%IMGUI")
   (export '%imgui::im-gui+text "%IMGUI")
   (export '%imgui::im-gui-dir "%IMGUI")
-  (export '%imgui::display-safe-area-padding "%IMGUI")
   (export '%imgui::im-gui+image-button "%IMGUI")
   (export '%imgui::im-gui-storage-pair "%IMGUI")
   (export '%imgui::add-input-character "%IMGUI")
   (export '%imgui::im-gui+push-style-var "%IMGUI")
-  (export '%imgui::item-inner-spacing "%IMGUI")
   (export '%imgui::im-gui+is-any-item-focused "%IMGUI")
   (export '%imgui::mouse-down-duration-prev "%IMGUI")
   (export '%imgui::im-gui+end-list-box "%IMGUI")
@@ -6354,7 +6057,7 @@
   (export '%imgui::im-vector<im-font*> "%IMGUI")
   (export '%imgui::circle-segment-max-error "%IMGUI")
   (export '%imgui::im-gui+set-scroll-from-pos-x "%IMGUI")
-  (export '%imgui::frame-padding "%IMGUI")
+  (export '%imgui::im-gui+tree-node-v "%IMGUI")
   (export '%imgui::size "%IMGUI")
   (export '%imgui::w "%IMGUI")
   (export '%imgui::im-gui+get-mouse-cursor "%IMGUI")
@@ -6365,38 +6068,35 @@
   (export '%imgui::user-callback-data "%IMGUI")
   (export '%imgui::grab-min-size "%IMGUI")
   (export '%imgui::mouse-drag-threshold "%IMGUI")
-  (export '%imgui::im-vector<char> "%IMGUI")
   (export '%imgui::mouse-clicked-time "%IMGUI")
   (export '%imgui::vtx-offset "%IMGUI")
   (export '%imgui::data-frame-count "%IMGUI")
   (export '%imgui::im-gui-popup-flags- "%IMGUI")
   (export '%imgui::backend-renderer-name "%IMGUI")
-  (export '%imgui::im-gui+tree-node-v "%IMGUI")
   (export '%imgui::im-gui-key-mod-flags "%IMGUI")
   (export '%imgui::im-gui+progress-bar "%IMGUI")
   (export '%imgui::x1 "%IMGUI")
   (export '%imgui::im-gui+pop-allow-keyboard-focus "%IMGUI")
   (export '%imgui::im-gui+input-text "%IMGUI")
   (export '%imgui::va-list "%IMGUI")
-  (export '%imgui::work-size "%IMGUI")
+  (export '%imgui::im-gui-input-text-callback "%IMGUI")
   (export '%imgui::im-gui-tree-node-flags- "%IMGUI")
   (export '%imgui::im-gui-table-bg-target "%IMGUI")
   (export '%imgui::descent "%IMGUI")
-  (export '%imgui::im-gui+is-mouse-hovering-rect "%IMGUI")
+  (export '%imgui::im-gui+value "%IMGUI")
   (export '%imgui::mouse-drag-max-distance-sqr "%IMGUI")
   (export '%imgui::mouse-down-owned "%IMGUI")
-  (export '%imgui::im-gui+table-header "%IMGUI")
+  (export '%imgui::im-gui+is-mouse-hovering-rect "%IMGUI")
   (export '%imgui::im-gui-slider-flags "%IMGUI")
   (export '%imgui::im-gui+is-mouse-pos-valid "%IMGUI")
+  (export '%imgui::im-gui+table-header "%IMGUI")
   (export '%imgui::im-gui-drag-drop-flags- "%IMGUI")
   (export '%imgui::column-index "%IMGUI")
   (export '%imgui::im-gui+v-slider-int "%IMGUI")
   (export '%imgui::im-draw-data "%IMGUI")
   (export '%imgui::+imgui-payload-type-color-3f+ "%IMGUI")
-  (export '%imgui::im-gui+value "%IMGUI")
   (export '%imgui::advance-x "%IMGUI")
   (export '%imgui::im-gui+get-clipboard-text "%IMGUI")
-  (export '%imgui::im-gui-input-text-callback "%IMGUI")
   (export '%imgui::im-gui+set-window-focus "%IMGUI")
   (export '%imgui::buf "%IMGUI")
   (export '%imgui::im-u32 "%IMGUI")
@@ -6420,16 +6120,14 @@
   (export '%imgui::im-vector<im-vec4> "%IMGUI")
   (export '%imgui::mouse-released "%IMGUI")
   (export '%imgui::im-gui+drag-int "%IMGUI")
-  (export '%imgui::mouse-pos-prev "%IMGUI")
+  (export '%imgui::size-pixels "%IMGUI")
   (export '%imgui::ini-filename "%IMGUI")
   (export '%imgui::tex-width "%IMGUI")
   (export '%imgui::im-gui+is-popup-open "%IMGUI")
-  (export '%imgui::im-vector<im-gui-storage+im-gui-storage-pair>
-          "%IMGUI")
   (export '%imgui::im-gui+set-window-pos "%IMGUI")
   (export '%imgui::im-draw-list-shared-data "%IMGUI")
   (export '%imgui::%channels "%IMGUI")
-  (export '%imgui::size-pixels "%IMGUI")
+  (export '%imgui::im-gui+text-disabled-v "%IMGUI")
   (export '%imgui::config-input-text-cursor-blink "%IMGUI")
   (export '%imgui::im-gui-col- "%IMGUI")
   (export '%imgui::im-vector<im-font-config> "%IMGUI")
@@ -6440,7 +6138,6 @@
   (export '%imgui::im-gui+slider-int2 "%IMGUI")
   (export '%imgui::alpha "%IMGUI")
   (export '%imgui::im-gui-table-row-flags "%IMGUI")
-  (export '%imgui::im-gui+text-disabled-v "%IMGUI")
   (export '%imgui::im-gui+begin-group "%IMGUI")
   (export '%imgui::im-gui-color-edit-flags- "%IMGUI")
   (export '%imgui::im-gui+is-item-deactivated-after-edit "%IMGUI")
@@ -6462,7 +6159,7 @@
   (export '%imgui::im-gui+push-item-width "%IMGUI")
   (export '%imgui::im-gui-nav-input "%IMGUI")
   (export '%imgui::framerate "%IMGUI")
-  (export '%imgui::im-gui+get-window-content-region-width "%IMGUI")
+  (export '%imgui::add-input-character-utf16 "%IMGUI")
   (export '%imgui::im-gui+color-button "%IMGUI")
   (export '%imgui::im-gui-sort-direction- "%IMGUI")
   (export '%imgui::im-gui+mem-free "%IMGUI")
@@ -6470,7 +6167,7 @@
   (export '%imgui::im-gui+table-get-column-index "%IMGUI")
   (export '%imgui::im-gui-hovered-flags "%IMGUI")
   (export '%imgui::im-gui+get-foreground-draw-list "%IMGUI")
-  (export '%imgui::get-bool "%IMGUI")
+  (export '%imgui::im-gui+get-window-content-region-width "%IMGUI")
   (export '%imgui::sort-order "%IMGUI")
   (export '%imgui::im-gui-table-flags "%IMGUI")
   (export '%imgui::display-end "%IMGUI")
@@ -6481,12 +6178,11 @@
   (export '%imgui::im-gui+tree-advance-to-label-pos "%IMGUI")
   (export '%imgui::im-font-builder-io "%IMGUI")
   (export '%imgui::pen-pressure "%IMGUI")
-  (export '%imgui::add-input-character-utf16 "%IMGUI")
   (export '%imgui::im-gui+set-window-font-scale "%IMGUI")
   (export '%imgui::im-gui+label-text "%IMGUI")
   (export '%imgui::config-windows-resize-from-edges "%IMGUI")
   (export '%imgui::im-gui+color-convert-u32to-float4 "%IMGUI")
-  (export '%imgui::im-gui+drag-scalar "%IMGUI")
+  (export '%imgui::im-gui+v-slider-scalar "%IMGUI")
   (export '%imgui::im-gui+get-cursor-screen-pos "%IMGUI")
   (export '%imgui::im-gui+set-item-default-focus "%IMGUI")
   (export '%imgui::log-slider-deadzone "%IMGUI")
@@ -6494,7 +6190,7 @@
   (export '%imgui::im-gui+open-popup "%IMGUI")
   (export '%imgui::im-gui+get-text-line-height "%IMGUI")
   (export '%imgui::height "%IMGUI")
-  (export '%imgui::v1 "%IMGUI")
+  (export '%imgui::im-gui+drag-scalar "%IMGUI")
   (export '%imgui::set-all-int "%IMGUI")
   (export '%imgui::%idx-write-ptr "%IMGUI")
   (export '%imgui::im-gui-key "%IMGUI")
@@ -6502,7 +6198,7 @@
   (export '%imgui::mouse-double-click-time "%IMGUI")
   (export '%imgui::c-str "%IMGUI")
   (export '%imgui::col "%IMGUI")
-  (export '%imgui::im-gui+v-slider-scalar "%IMGUI")
+  (export '%imgui::get-bool "%IMGUI")
   (export '%imgui::im-gui+show-demo-window "%IMGUI")
   (export '%imgui::im-gui+color-edit3 "%IMGUI")
   (export '%imgui::im-gui+is-key-down "%IMGUI")
@@ -6525,7 +6221,6 @@
   (export '%imgui::index-advance-x "%IMGUI")
   (export '%imgui::im-gui-cond "%IMGUI")
   (export '%imgui::im-font-config "%IMGUI")
-  (export '%imgui::selectable-text-align "%IMGUI")
   (export '%imgui::im-gui-color-edit-flags "%IMGUI")
   (export '%imgui::im-gui+color-edit4 "%IMGUI")
   (export '%imgui::metrics-render-indices "%IMGUI")
@@ -6543,22 +6238,22 @@
   (export '%imgui::im-gui+log-to-clipboard "%IMGUI")
   (export '%imgui::im-u8 "%IMGUI")
   (export '%imgui::im-gui+slider-scalar "%IMGUI")
-  (export '%imgui::im-gui-payload "%IMGUI")
+  (export '%imgui::im-gui+text-colored-v "%IMGUI")
   (export '%imgui::im-gui+selectable "%IMGUI")
   (export '%imgui::im-gui-table-flags- "%IMGUI")
   (export '%imgui::im-gui+slider-int3 "%IMGUI")
   (export '%imgui::im-gui+show-font-selector "%IMGUI")
-  (export '%imgui::im-gui+set-current-context "%IMGUI")
+  (export '%imgui::im-gui+tree-node-ex-v "%IMGUI")
   (export '%imgui::used4k-pages-map "%IMGUI")
-  (export '%imgui::im-gui+text-colored-v "%IMGUI")
   (export '%imgui::anti-aliased-lines "%IMGUI")
   (export '%imgui::im-gui+get-scroll-y "%IMGUI")
   (export '%imgui::im-gui-viewport "%IMGUI")
   (export '%imgui::name "%IMGUI")
   (export '%imgui::im-gui+get-window-content-region-max "%IMGUI")
   (export '%imgui::%%gr-offs "%IMGUI")
-  (export '%imgui::im-gui+tree-node-ex-v "%IMGUI")
-  (export '%imgui::input-queue-characters "%IMGUI")
+  (export '%imgui::v1 "%IMGUI")
+  (export '%imgui::appendf "%IMGUI")
+  (export '%imgui::key-repeat-rate "%IMGUI")
   (export '%imgui::tex-pixels-rgba32 "%IMGUI")
   (export '%imgui::im-gui+pop-button-repeat "%IMGUI")
   (export '%imgui::%%vr-offs "%IMGUI")
@@ -6567,21 +6262,19 @@
   (export '%imgui::display-size "%IMGUI")
   (export '%imgui::ellipsis-char "%IMGUI")
   (export '%imgui::total-idx-count "%IMGUI")
-  (export '%imgui::appendf "%IMGUI")
-  (export '%imgui::key-repeat-rate "%IMGUI")
+  (export '%imgui::im-gui+set-next-window-pos "%IMGUI")
   (export '%imgui::display-pos "%IMGUI")
   (export '%imgui::metrics-active-allocations "%IMGUI")
-  (export '%imgui::appendfv "%IMGUI")
+  (export '%imgui::im-gui-payload "%IMGUI")
   (export '%imgui::glyph-id "%IMGUI")
   (export '%imgui::im-gui+begin-menu-bar "%IMGUI")
   (export '%imgui::ref-frame "%IMGUI")
   (export '%imgui::im-gui+get-main-viewport "%IMGUI")
-  (export '%imgui::im-gui+set-next-window-pos "%IMGUI")
+  (export '%imgui::im-gui+set-current-context "%IMGUI")
   (export '%imgui::y1 "%IMGUI")
   (export '%imgui::e "%IMGUI")
+  (export '%imgui::appendfv "%IMGUI")
   (export '%imgui::popup-border-size "%IMGUI")
-  (export '%imgui::item-spacing "%IMGUI")
-  (export '%imgui::display-window-padding "%IMGUI")
   (export '%imgui::backend-platform-user-data "%IMGUI")
   (export '%imgui::key-repeat-delay "%IMGUI")
   (export '%imgui::im-gui+plot-histogram "%IMGUI")
@@ -6594,10 +6287,9 @@
   (export '%imgui::im-gui+get-font-tex-uv-white-pixel "%IMGUI")
   (export '%imgui::im-gui+capture-mouse-from-app "%IMGUI")
   (export '%imgui::tex-uv-lines "%IMGUI")
-  (export '%imgui::window-min-size "%IMGUI")
+  (export '%imgui::im-gui+show-metrics-window "%IMGUI")
   (export '%imgui::mouse-down-duration "%IMGUI")
   (export '%imgui::im-gui-once-upon-a-frame "%IMGUI")
-  (export '%imgui::im-gui+show-metrics-window "%IMGUI")
   (export '%imgui::im-gui-data-type "%IMGUI")
   (export '%imgui::indent-spacing "%IMGUI")
   (export '%imgui::im-gui+is-item-deactivated "%IMGUI")
@@ -6610,35 +6302,31 @@
   (export '%imgui::im-gui+input-float4 "%IMGUI")
   (export '%imgui::im-gui+save-ini-settings-to-memory "%IMGUI")
   (export '%imgui::im-gui-input-text-flags- "%IMGUI")
-  (export '%imgui::im-gui+next-column "%IMGUI")
+  (export '%imgui::popup-rounding "%IMGUI")
   (export '%imgui::~im-gui-input-text-callback-data "%IMGUI")
   (export '%imgui::im-gui+bullet-text-v "%IMGUI")
   (export '%imgui::im-draw-list-splitter "%IMGUI")
   (export '%imgui::im-gui+drag-int2 "%IMGUI")
-  (export '%imgui::window-rounding "%IMGUI")
+  (export '%imgui::im-gui+next-column "%IMGUI")
   (export '%imgui::tex-uv-scale "%IMGUI")
-  (export '%imgui::display-framebuffer-scale "%IMGUI")
   (export '%imgui::im-gui+indent "%IMGUI")
   (export '%imgui::im-font-atlas-custom-rect "%IMGUI")
-  (export '%imgui::popup-rounding "%IMGUI")
+  (export '%imgui::im-gui+set-next-window-size "%IMGUI")
   (export '%imgui::%current "%IMGUI")
   (export '%imgui::im-gui+style-colors-classic "%IMGUI")
   (export '%imgui::insert-chars "%IMGUI")
   (export '%imgui::im-gui+color-convert-hs-vto-rgb "%IMGUI")
   (export '%imgui::config-flags "%IMGUI")
-  (export '%imgui::tab-border-size "%IMGUI")
+  (export '%imgui::im-gui+tree-push "%IMGUI")
   (export '%imgui::im-gui-popup-flags "%IMGUI")
   (export '%imgui::fallback-advance-x "%IMGUI")
   (export '%imgui::flags "%IMGUI")
-  (export '%imgui::current-size "%IMGUI")
+  (export '%imgui::tab-border-size "%IMGUI")
   (export '%imgui::im-gui+set-next-tree-node-open "%IMGUI")
-  (export '%imgui::im-gui+set-next-window-size "%IMGUI")
   (export '%imgui::im-gui+get-id "%IMGUI")
   (export '%imgui::key-alt "%IMGUI")
   (export '%imgui::im-gui+columns "%IMGUI")
-  (export '%imgui::im-gui+tree-push "%IMGUI")
   (export '%imgui::pos "%IMGUI")
-  (export '%imgui::desired-size "%IMGUI")
   (export '%imgui::im-gui+is-any-item-hovered "%IMGUI")
   (export '%imgui::want-set-mouse-pos "%IMGUI")
   (export '%imgui::tex-uv-white-pixel "%IMGUI")
@@ -6653,10 +6341,11 @@
   (export '%imgui::pack-id-mouse-cursors "%IMGUI")
   (export '%imgui::keys-down "%IMGUI")
   (export '%imgui::im-gui+log-to-tty "%IMGUI")
-  (export '%imgui::im-gui-input-text-callback-data "%IMGUI")
+  (export '%imgui::window-rounding "%IMGUI")
   (export '%imgui::operator[] "%IMGUI")
   (export '%imgui::fonts "%IMGUI")
   (export '%imgui::im-gui-tab-bar-flags "%IMGUI")
+  (export '%imgui::im-gui-input-text-callback-data "%IMGUI")
   (export '%imgui::rasterizer-multiply "%IMGUI")
   (export '%imgui::im-gui-tab-item-flags- "%IMGUI")
   (export '%imgui::im-font-atlas "%IMGUI")
@@ -6671,7 +6360,7 @@
   (export '%imgui::~im-gui-table-column-sort-specs "%IMGUI")
   (export '%imgui::im-gui+get-scroll-max-x "%IMGUI")
   (export '%imgui::im-gui+style-colors-light "%IMGUI")
-  (export '%imgui::mouse-delta "%IMGUI")
+  (export '%imgui::im-gui+color-picker4 "%IMGUI")
   (export '%imgui::get-float-ref "%IMGUI")
   (export '%imgui::add-input-characters-utf8 "%IMGUI")
   (export '%imgui::im-gui+pop-id "%IMGUI")
@@ -6684,33 +6373,31 @@
   (export '%imgui::im-gui+begin-drag-drop-target "%IMGUI")
   (export '%imgui::scale "%IMGUI")
   (export '%imgui::im-gui+get-time "%IMGUI")
-  (export '%imgui::im-gui+color-picker4 "%IMGUI")
   (export '%imgui::scrollbar-rounding "%IMGUI")
   (export '%imgui::im-gui+set-cursor-pos-y "%IMGUI")
   (export '%imgui::cmd-buffer "%IMGUI")
   (export '%imgui::im-gui+slider-scalar-n "%IMGUI")
   (export '%imgui::im-gui-combo-flags "%IMGUI")
-  (export '%imgui::im-gui+begin-menu "%IMGUI")
+  (export '%imgui::im-gui+tree-node "%IMGUI")
   (export '%imgui::im-gui+push-clip-rect "%IMGUI")
   (export '%imgui::im-draw-channel "%IMGUI")
-  (export '%imgui::font-default "%IMGUI")
-  (export '%imgui::mouse-down "%IMGUI")
+  (export '%imgui::im-gui+tree-node-ex "%IMGUI")
   (export '%imgui::im-gui+load-ini-settings-from-disk "%IMGUI")
   (export '%imgui::custom-rects "%IMGUI")
   (export '%imgui::%cmd-header "%IMGUI")
-  (export '%imgui::work-pos "%IMGUI")
+  (export '%imgui::im-gui+begin-menu "%IMGUI")
+  (export '%imgui::window-menu-button-position "%IMGUI")
   (export '%imgui::im-gui+is-window-focused "%IMGUI")
   (export '%imgui::im-gui+get-item-rect-size "%IMGUI")
   (export '%imgui::im-gui+close-current-popup "%IMGUI")
-  (export '%imgui::+imgui-has-table+ "%IMGUI")
+  (export '%imgui::mouse-down "%IMGUI")
   (export '%imgui::im-gui+drag-float4 "%IMGUI")
   (export '%imgui::mouse-double-clicked "%IMGUI")
   (export '%imgui::im-gui+table-get-column-count "%IMGUI")
   (export '%imgui::im-gui+get-frame-height-with-spacing "%IMGUI")
   (export '%imgui::im-gui+set-next-window-focus "%IMGUI")
   (export '%imgui::im-gui+pop-style-color "%IMGUI")
-  (export '%imgui::window-menu-button-position "%IMGUI")
-  (export '%imgui::im-gui+tree-node-ex "%IMGUI")
+  (export '%imgui::+imgui-has-table+ "%IMGUI")
   (export '%imgui::im-gui-window-flags "%IMGUI")
   (export '%imgui::im-gui+get-item-rect-min "%IMGUI")
   (export '%imgui::buf-size "%IMGUI")
@@ -6723,12 +6410,11 @@
   (export '%imgui::im-gui-storage+im-gui-storage-pair "%IMGUI")
   (export '%imgui::im-gui+begin-popup "%IMGUI")
   (export '%imgui::event-flag "%IMGUI")
-  (export '%imgui::window-title-align "%IMGUI")
+  (export '%imgui::font-allow-user-scaling "%IMGUI")
   (export '%imgui::reserve "%IMGUI")
   (export '%imgui::get-void-ptr-ref "%IMGUI")
   (export '%imgui::font-data-owned-by-atlas "%IMGUI")
   (export '%imgui::im-gui-mouse-button- "%IMGUI")
-  (export '%imgui::im-gui+tree-node "%IMGUI")
   (export '%imgui::index-lookup "%IMGUI")
   (export '%imgui::+imgui-impl-api+ "%IMGUI")
   (export '%imgui::im-gui+log-finish "%IMGUI")
@@ -6741,11 +6427,9 @@
   (export '%imgui::im-gui+list-box-footer "%IMGUI")
   (export '%imgui::im-gui+is-mouse-down "%IMGUI")
   (export '%imgui::mouse-clicked "%IMGUI")
-  (export '%imgui::button-text-align "%IMGUI")
   (export '%imgui::buf-dirty "%IMGUI")
   (export '%imgui::im-gui-mouse-cursor "%IMGUI")
   (export '%imgui::im-gui+drag-int3 "%IMGUI")
-  (export '%imgui::font-allow-user-scaling "%IMGUI")
   (export '%imgui::im-gui+is-item-activated "%IMGUI")
   (export '%imgui::frame-border-size "%IMGUI")
   (export '%imgui::key-mods "%IMGUI")
@@ -6764,7 +6448,6 @@
   (export '%imgui::im-gui-mouse-cursor- "%IMGUI")
   (export '%imgui::config-windows-move-from-title-bar-only "%IMGUI")
   (export '%imgui::delta-time "%IMGUI")
-  (export '%imgui::filters "%IMGUI")
   (export '%imgui::has-selection "%IMGUI")
   (export '%imgui::valid "%IMGUI")
   (export '%imgui::anti-aliased-lines-use-tex "%IMGUI")
@@ -6777,7 +6460,7 @@
   (export '%imgui::im-gui-input-text-flags "%IMGUI")
   (export '%imgui::im-gui+push-text-wrap-pos "%IMGUI")
   (export '%imgui::buf-text-len "%IMGUI")
-  (export '%imgui::touch-extra-padding "%IMGUI")
+  (export '%imgui::im-gui+end-drag-drop-target "%IMGUI")
   (export '%imgui::im-gui+set-next-item-open "%IMGUI")
   (export '%imgui::im-vector<void*> "%IMGUI")
   (export '%imgui::im-gui+is-item-focused "%IMGUI")
@@ -6785,18 +6468,17 @@
   (export '%imgui::im-gui+begin-drag-drop-source "%IMGUI")
   (export '%imgui::im-gui+is-key-pressed "%IMGUI")
   (export '%imgui::set-clipboard-text-fn "%IMGUI")
-  (export '%imgui::mouse-pos "%IMGUI")
+  (export '%imgui::im-gui+is-window-hovered "%IMGUI")
   (export '%imgui::im-gui+begin-tab-item "%IMGUI")
   (export '%imgui::im-gui-text-buffer "%IMGUI")
   (export '%imgui::im-vector<float> "%IMGUI")
   (export '%imgui::im-gui+get-drag-drop-payload "%IMGUI")
   (export '%imgui::locked "%IMGUI")
-  (export '%imgui::im-gui+is-window-hovered "%IMGUI")
   (export '%imgui::build-sort-by-key "%IMGUI")
   (export '%imgui::im-gui-text-filter "%IMGUI")
   (export '%imgui::im-gui+table-get-row-index "%IMGUI")
   (export '%imgui::im-gui-size-callback-data "%IMGUI")
-  (export '%imgui::im-gui+end-drag-drop-target "%IMGUI")
+  (export '%imgui::~im-gui-style "%IMGUI")
   (export '%imgui::im-gui+get-column-offset "%IMGUI")
   (export '%imgui::im-gui+input-float "%IMGUI")
   (export '%imgui::im-gui+set-tooltip-v "%IMGUI")
@@ -6815,7 +6497,6 @@
   (export '%imgui::get-work-center "%IMGUI")
   (export '%imgui::clear "%IMGUI")
   (export '%imgui::+imgui-version+ "%IMGUI")
-  (export '%imgui::~im-gui-style "%IMGUI")
   (export '%imgui::im-gui+begin-child "%IMGUI")
   (export '%imgui::im-gui+set-cursor-pos-x "%IMGUI")
   (export '%imgui::clip-rect "%IMGUI")
@@ -6852,7 +6533,7 @@
   (export '%imgui::im-gui-io "%IMGUI")
   (export '%imgui::im-gui-context "%IMGUI")
   (export '%imgui::select-all "%IMGUI")
-  (export '%imgui::key "%IMGUI")
+  (export '%imgui::im-gui+end-group "%IMGUI")
   (export '%imgui::~im-gui-text-buffer "%IMGUI")
   (export '%imgui::pixel-snap-h "%IMGUI")
   (export '%imgui::im-gui+set-window-size "%IMGUI")
@@ -6869,16 +6550,16 @@
   (export '%imgui::colored "%IMGUI")
   (export '%imgui::get-void-ptr "%IMGUI")
   (export '%imgui::im-gui+set-scroll-x "%IMGUI")
-  (export '%imgui::im-gui+end-group "%IMGUI")
+  (export '%imgui::im-gui+text-unformatted "%IMGUI")
   (export '%imgui::im-gui+get-font "%IMGUI")
   (export '%imgui::im-gui+get-mouse-drag-delta "%IMGUI")
   (export '%imgui::im-font "%IMGUI")
   (export '%imgui::im-gui+slider-angle "%IMGUI")
   (export '%imgui::display-start "%IMGUI")
   (export '%imgui::im-gui+get-state-storage "%IMGUI")
-  (export '%imgui::mouse-drag-max-distance-abs "%IMGUI")
+  (export '%imgui::u0 "%IMGUI")
   (export '%imgui::im-gui+get-content-region-avail "%IMGUI")
-  (export '%imgui::mouse-clicked-pos "%IMGUI")
+  (export '%imgui::im-gui+unindent "%IMGUI")
   (export '%imgui::cmd-lists-count "%IMGUI")
   (export '%imgui::nav-inputs-down-duration-prev "%IMGUI")
   (export '%imgui::nav-inputs "%IMGUI")
@@ -6886,7 +6567,7 @@
   (export '%imgui::im-gui+begin-list-box "%IMGUI")
   (export '%imgui::im-gui+get-io "%IMGUI")
   (export '%imgui::im-gui-button-flags "%IMGUI")
-  (export '%imgui::u0 "%IMGUI")
+  (export '%imgui::key "%IMGUI")
   (export '%imgui::im-gui+get-scroll-max-y "%IMGUI")
   (export '%imgui::im-gui-key-mod-flags- "%IMGUI")
   (export '%imgui::total-vtx-count "%IMGUI")
@@ -6902,7 +6583,7 @@
   (export '%imgui::im-gui+table-get-sort-specs "%IMGUI")
   (export '%imgui::im-gui+text-disabled "%IMGUI")
   (export '%imgui::+imgui-version-num+ "%IMGUI")
-  (export '%imgui::im-gui+unindent "%IMGUI")
+  (export '%imgui::~im-gui-payload "%IMGUI")
   (export '%imgui::im-gui+is-mouse-double-clicked "%IMGUI")
   (export '%imgui::im-gui+get-window-draw-list "%IMGUI")
   (export '%imgui::im-gui+get-window-pos "%IMGUI")
@@ -6911,7 +6592,6 @@
   (export '%imgui::get-int "%IMGUI")
   (export '%imgui::im-gui-tab-bar-flags- "%IMGUI")
   (export '%imgui::im-gui+get-overlay-draw-list "%IMGUI")
-  (export '%imgui::im-gui+text-unformatted "%IMGUI")
   (export '%imgui::im-gui+image "%IMGUI")
   (export '%imgui::im-gui-combo-flags- "%IMGUI")
   (export '%imgui::glyph-max-advance-x "%IMGUI")
@@ -6922,9 +6602,8 @@
   (export '%imgui::im-font-atlas-flags "%IMGUI")
   (export '%imgui::fallback-glyph "%IMGUI")
   (export '%imgui::im-gui+get-column-index "%IMGUI")
-  (export '%imgui::data-size "%IMGUI")
+  (export '%imgui::im-gui+text-colored "%IMGUI")
   (export '%imgui::%path "%IMGUI")
-  (export '%imgui::~im-gui-payload "%IMGUI")
   (export '%imgui::im-gui+get-cursor-pos-y "%IMGUI")
   (export '%imgui::im-gui+input-float2 "%IMGUI")
   (export '%imgui::im-gui+input-int4 "%IMGUI")
@@ -6932,11 +6611,10 @@
   (export '%imgui::~im-gui-table-sort-specs "%IMGUI")
   (export '%imgui::im-gui+get-text-line-height-with-spacing "%IMGUI")
   (export '%imgui::x "%IMGUI")
-  (export '%imgui::%fringe-scale "%IMGUI")
-  (export '%imgui::im-gui+text-colored "%IMGUI")
+  (export '%imgui::data-size "%IMGUI")
   (export '%imgui::mouse-down-was-double-click "%IMGUI")
   (export '%imgui::im-gui+drag-float "%IMGUI")
-  (export '%imgui::im-gui+get-current-context "%IMGUI")
+  (export '%imgui::%fringe-scale "%IMGUI")
   (export '%imgui::delete-chars "%IMGUI")
   (export '%imgui::im-gui+get-item-rect-max "%IMGUI")
   (export '%imgui::~im-gui-viewport "%IMGUI")
@@ -6945,6 +6623,7 @@
   (export '%imgui::im-gui+end-table "%IMGUI")
   (export '%imgui::im-gui+set-scroll-from-pos-y "%IMGUI")
   (export '%imgui::tex-desired-width "%IMGUI")
+  (export '%imgui::im-gui+get-current-context "%IMGUI")
   (export '%imgui::im-gui+set-allocator-functions "%IMGUI")
   (export '%imgui::im-gui+get-draw-list-shared-data "%IMGUI")
   (export '%imgui::im-gui+color-convert-float4to-u32 "%IMGUI")
@@ -6957,7 +6636,7 @@
   (export '%imgui::z "%IMGUI")
   (export '%imgui::im-gui+table-set-bg-color "%IMGUI")
   (export '%imgui::pack-id-lines "%IMGUI")
-  (export '%imgui::im-gui+get-key-pressed-amount "%IMGUI")
+  (export '%imgui::im-gui+text-v "%IMGUI")
   (export '%imgui::fallback-char "%IMGUI")
   (export '%imgui::im-gui+mem-alloc "%IMGUI")
   (export '%imgui::%owner-name "%IMGUI")
@@ -6966,11 +6645,10 @@
   (export '%imgui::get-float "%IMGUI")
   (export '%imgui::im-gui-table-column-flags- "%IMGUI")
   (export '%imgui::im-gui+push-button-repeat "%IMGUI")
-  (export '%imgui::colors "%IMGUI")
-  (export '%imgui::im-gui+text-v "%IMGUI")
+  (export '%imgui::im-gui+get-key-pressed-amount "%IMGUI")
   (export '%imgui::im-gui+set-tooltip "%IMGUI")
   (export '%imgui::im-gui+input-scalar "%IMGUI")
-  (export '%imgui::%count "%IMGUI")
+  (export '%imgui::im-gui+table-setup-scroll-freeze "%IMGUI")
   (export '%imgui::anti-aliased-fill "%IMGUI")
   (export '%imgui::tab-min-width-for-close-button "%IMGUI")
   (export '%imgui::capacity "%IMGUI")
@@ -6979,54 +6657,53 @@
   (export '%imgui::im-s16 "%IMGUI")
   (export '%imgui::font-no "%IMGUI")
   (export '%imgui::set-void-ptr "%IMGUI")
-  (export '%imgui::im-vector<im-draw-vert> "%IMGUI")
-  (export '%imgui::cell-padding "%IMGUI")
+  (export '%imgui::im-gui+table-set-column-index "%IMGUI")
+  (export '%imgui::im-gui+get-content-region-avail-width "%IMGUI")
   (export '%imgui::clear-selection "%IMGUI")
   (export '%imgui::child-rounding "%IMGUI")
   (export '%imgui::im-gui+drag-int-range2 "%IMGUI")
   (export '%imgui::im-gui-tab-item-flags "%IMGUI")
   (export '%imgui::im-vector<unsigned+short> "%IMGUI")
+  (export '%imgui::%count "%IMGUI")
   (export '%imgui::im-gui+is-mouse-dragging "%IMGUI")
   (export '%imgui::im-texture-id "%IMGUI")
   (export '%imgui::mouse-draw-cursor "%IMGUI")
   (export '%imgui::im-gui+end-child "%IMGUI")
   (export '%imgui::im-gui+begin-popup-context-item "%IMGUI")
-  (export '%imgui::im-gui+get-content-region-avail-width "%IMGUI")
   (export '%imgui::selection-end "%IMGUI")
-  (export '%imgui::im-vec4 "%IMGUI")
+  (export '%imgui::im-gui+table-setup-column "%IMGUI")
   (export '%imgui::im-gui+set-cursor-screen-pos "%IMGUI")
   (export '%imgui::ime-set-input-screen-pos-fn "%IMGUI")
-  (export '%imgui::~im-gui-storage-pair "%IMGUI")
+  (export '%imgui::im-vec4 "%IMGUI")
   (export '%imgui::im-gui+get-mouse-pos-on-opening-current-popup
           "%IMGUI")
   (export '%imgui::im-gui-size-callback "%IMGUI")
-  (export '%imgui::window-padding "%IMGUI")
   (export '%imgui::mouse-double-click-max-dist "%IMGUI")
   (export '%imgui::im-gui-viewport-flags- "%IMGUI")
   (export '%imgui::im-gui+end "%IMGUI")
   (export '%imgui::im-gui+calc-text-size "%IMGUI")
-  (export '%imgui::im-gui+table-setup-column "%IMGUI")
+  (export '%imgui::step-no "%IMGUI")
   (export '%imgui::window-border-size "%IMGUI")
   (export '%imgui::im-gui-table-bg-target- "%IMGUI")
   (export '%imgui::merge-mode "%IMGUI")
   (export '%imgui::~im-gui-size-callback-data "%IMGUI")
-  (export '%imgui::im-gui+plot-lines "%IMGUI")
+  (export '%imgui::im-vector<im-draw-vert> "%IMGUI")
   (export '%imgui::im-gui+is-item-hovered "%IMGUI")
   (export '%imgui::im-gui+log-to-file "%IMGUI")
   (export '%imgui::im-gui+pop-style-var "%IMGUI")
-  (export '%imgui::im-gui+set-scroll-here-x "%IMGUI")
+  (export '%imgui::im-gui+tree-pop "%IMGUI")
   (export '%imgui::keys-down-duration-prev "%IMGUI")
   (export '%imgui::scrollbar-size "%IMGUI")
   (export '%imgui::im-gui-key- "%IMGUI")
   (export '%imgui::backend-language-user-data "%IMGUI")
   (export '%imgui::metrics-active-windows "%IMGUI")
   (export '%imgui::im-gui+show-about-window "%IMGUI")
-  (export '%imgui::im-gui+table-setup-scroll-freeze "%IMGUI")
+  (export '%imgui::im-gui+plot-lines "%IMGUI")
   (export '%imgui::im-gui+get-frame-height "%IMGUI")
   (export '%imgui::im-gui+is-mouse-released "%IMGUI")
   (export '%imgui::im-gui-selectable-flags "%IMGUI")
   (export '%imgui::u1 "%IMGUI")
-  (export '%imgui::pass-filter "%IMGUI")
+  (export '%imgui::~im-gui-storage-pair "%IMGUI")
   (export '%imgui::mouse-wheel "%IMGUI")
   (export '%imgui::+imgui-api+ "%IMGUI")
   (export '%imgui::im-gui+end-tab-item "%IMGUI")
@@ -7074,5 +6751,5 @@
   (export '%imgui::im-gui+begin-table "%IMGUI")
   (export '%imgui::%%stack "%IMGUI")
   (export '%imgui::items-count "%IMGUI")
-  (export '%imgui::im-gui+tree-pop "%IMGUI"))
+  (export '%imgui::im-gui+set-scroll-here-x "%IMGUI"))
 

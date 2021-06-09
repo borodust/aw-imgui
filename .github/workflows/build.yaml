@@ -1,0 +1,28 @@
+name: Build
+on:
+  push:
+    tags:
+      - "v*.*.*"
+jobs:
+  Build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Check Out Everything
+        id: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Install LLVM And Clang
+        uses: KyleMayes/install-llvm-action@v1
+        with:
+          version: "9.0"
+      - name: Build Binaries
+        run: |
+          cd ${{ github.workspace }}/src/lib/ && ./build.sh desktop
+      - name: Publish Binaries
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: |
+            src/lib/build/desktop/libimgui.clawed.so
