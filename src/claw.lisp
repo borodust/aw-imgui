@@ -1,5 +1,5 @@
-(claw.wrapper:defwrapper (:claw-imgui
-                          (:system :claw-imgui/wrapper)
+(claw.wrapper:defwrapper (:aw-imgui
+                          (:system :aw-imgui/wrapper)
                           (:headers "imgui.h"
                                     "imstb_textedit.h"
                                     "imstb_truetype.h")
@@ -7,8 +7,8 @@
                           (:includes :imgui-includes)
                           (:targets ((:and :x86-64 :linux) "x86_64-pc-linux-gnu")
                                     ((:and :aarch64 :android) "aarch64-linux-android"))
-                          (:persistent :claw-imgui-bindings
-                           :asd-path "../claw-imgui-bindings.asd"
+                          (:persistent :aw-imgui-bindings
+                           :asd-path "../aw-imgui-bindings.asd"
                            :bindings-path "../bindings/"
                            :depends-on (:claw-utils))
                           (:language :c++)

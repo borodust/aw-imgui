@@ -1,13 +1,13 @@
-(asdf:defsystem :claw-imgui
+(asdf:defsystem :aw-imgui
   :description "Bindings to Dear ImGui"
   :version "1.0.0"
   :author "Pavel Korolev"
   :mailto "dev@borodust.org"
   :license "MIT"
-  :depends-on (:claw-imgui-bindings))
+  :depends-on (:aw-imgui-bindings))
 
 
-(asdf:defsystem :claw-imgui/wrapper
+(asdf:defsystem :aw-imgui/wrapper
   :description "Wrapper generator for Dear ImGui"
   :version "1.0.0"
   :author "Pavel Korolev"
