@@ -12,9 +12,7 @@
                            :bindings-path "../bindings/"
                            :depends-on (:claw-utils))
                           (:language :c++)
-                          (:include-definitions "^ImGui"
-                                                "^IMGUI_")
-                          (:exclude-definitions "__va_list_tag"))
+                          (:include-definitions "^ImGui" "^IMGUI_"))
   :in-package :%imgui
   :trim-enum-prefix t
   :recognize-bitfields t
