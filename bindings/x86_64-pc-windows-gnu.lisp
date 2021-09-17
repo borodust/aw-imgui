@@ -831,7 +831,7 @@
 
 (cffi:defctype %imgui::va-list (:pointer :void))
 
-(iffi:defifun ("__claw__ZN5ImGui11BulletTextVEPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui11BulletTextVEPKcPc"
                %imgui::im-gui+bullet-text-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:494:29"
@@ -1084,10 +1084,10 @@
                (claw-utils:claw-pointer %imgui::im-font-atlas)))
 
 (iffi:defitype %imgui::size-t
-               :unsigned-long
+               :unsigned-long-long
                "/usr/lib/clang/12.0.1/include/stddef.h:46:23")
 
-(iffi:defifun ("__claw__ZN5ImGui30DebugCheckVersionAndDataLayoutEPKcmmmmmm"
+(iffi:defifun ("__claw__ZN5ImGui30DebugCheckVersionAndDataLayoutEPKcyyyyyy"
                %imgui::im-gui+debug-check-version-and-data-layout)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:927:29"
@@ -1397,7 +1397,7 @@
                (claw-utils:claw-pointer :void)
                "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:251:19")
 
-(iffi:defifun ("__claw__ZN5ImGui21GetAllocatorFunctionsEPPFPvmS0_EPPFvS0_S0_EPS0_"
+(iffi:defifun ("__claw__ZN5ImGui21GetAllocatorFunctionsEPPFPvyS0_EPPFvS0_S0_EPS0_"
                %imgui::im-gui+get-allocator-functions)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:934:29"
@@ -2678,7 +2678,7 @@
                (claw-utils:claw-pointer :void)
                "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:248:19")
 
-(iffi:defifun ("__claw__ZN5ImGui9InputTextEPKcPcmiPFiP26ImGuiInputTextCallbackDataEPv"
+(iffi:defifun ("__claw__ZN5ImGui9InputTextEPKcPcyiPFiP26ImGuiInputTextCallbackDataEPv"
                %imgui::im-gui+input-text)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:570:29"
@@ -2689,7 +2689,7 @@
               (%imgui::callback %imgui::im-gui-input-text-callback)
               (%imgui::user-data (claw-utils:claw-pointer :void)))
 
-(iffi:defifun ("__claw__ZN5ImGui18InputTextMultilineEPKcPcmRK6ImVec2iPFiP26ImGuiInputTextCallbackDataEPv"
+(iffi:defifun ("__claw__ZN5ImGui18InputTextMultilineEPKcPcyRK6ImVec2iPFiP26ImGuiInputTextCallbackDataEPv"
                %imgui::im-gui+input-text-multiline)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:571:29"
@@ -2702,7 +2702,7 @@
               (%imgui::callback %imgui::im-gui-input-text-callback)
               (%imgui::user-data (claw-utils:claw-pointer :void)))
 
-(iffi:defifun ("__claw__ZN5ImGui17InputTextWithHintEPKcS1_PcmiPFiP26ImGuiInputTextCallbackDataEPv"
+(iffi:defifun ("__claw__ZN5ImGui17InputTextWithHintEPKcS1_PcyiPFiP26ImGuiInputTextCallbackDataEPv"
                %imgui::im-gui+input-text-with-hint)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:572:29"
@@ -2928,7 +2928,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN5ImGui10LabelTextVEPKcS1_St9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui10LabelTextVEPKcS1_Pc"
                %imgui::im-gui+label-text-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:492:29"
@@ -2972,7 +2972,7 @@
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:920:29"
               (%imgui::ini-filename claw-utils:claw-string))
 
-(iffi:defifun ("__claw__ZN5ImGui25LoadIniSettingsFromMemoryEPKcm"
+(iffi:defifun ("__claw__ZN5ImGui25LoadIniSettingsFromMemoryEPKcy"
                %imgui::im-gui+load-ini-settings-from-memory)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:921:29"
@@ -2996,7 +2996,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN5ImGui8LogTextVEPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui8LogTextVEPKcPc"
                %imgui::im-gui+log-text-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:799:29"
@@ -3022,7 +3022,7 @@
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:793:29"
               (%imgui::auto-open-depth :int))
 
-(iffi:defifun ("__claw__ZN5ImGui8MemAllocEm"
+(iffi:defifun ("__claw__ZN5ImGui8MemAllocEy"
                %imgui::im-gui+mem-alloc)
               (claw-utils:claw-pointer :void)
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:935:29"
@@ -3333,7 +3333,7 @@
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:922:29"
               (%imgui::ini-filename claw-utils:claw-string))
 
-(iffi:defifun ("__claw__ZN5ImGui23SaveIniSettingsToMemoryEPm"
+(iffi:defifun ("__claw__ZN5ImGui23SaveIniSettingsToMemoryEPy"
                %imgui::im-gui+save-ini-settings-to-memory)
               claw-utils:claw-string
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:923:29"
@@ -3369,7 +3369,7 @@
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:437:29")
 
-(iffi:defifun ("__claw__ZN5ImGui21SetAllocatorFunctionsEPFPvmS0_EPFvS0_S0_ES0_"
+(iffi:defifun ("__claw__ZN5ImGui21SetAllocatorFunctionsEPFPvyS0_EPFvS0_S0_ES0_"
                %imgui::im-gui+set-allocator-functions)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:933:29"
@@ -3439,7 +3439,7 @@
                :int
                "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:168:13")
 
-(iffi:defifun ("__claw__ZN5ImGui18SetDragDropPayloadEPKcPKvmi"
+(iffi:defifun ("__claw__ZN5ImGui18SetDragDropPayloadEPKcPKvyi"
                %imgui::im-gui+set-drag-drop-payload)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:807:29"
@@ -3600,7 +3600,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN5ImGui11SetTooltipVEPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui11SetTooltipVEPKcPc"
                %imgui::im-gui+set-tooltip-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:665:29"
@@ -4089,7 +4089,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN5ImGui12TextColoredVERK6ImVec4PKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui12TextColoredVERK6ImVec4PKcPc"
                %imgui::im-gui+text-colored-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:486:29"
@@ -4104,7 +4104,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN5ImGui13TextDisabledVEPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui13TextDisabledVEPKcPc"
                %imgui::im-gui+text-disabled-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:488:29"
@@ -4118,8 +4118,7 @@
               (%imgui::text claw-utils:claw-string)
               (%imgui::text-end claw-utils:claw-string))
 
-(iffi:defifun ("__claw__ZN5ImGui5TextVEPKcSt9__va_list"
-               %imgui::im-gui+text-v)
+(iffi:defifun ("__claw__ZN5ImGui5TextVEPKcPc" %imgui::im-gui+text-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:484:29"
               (%imgui::fmt claw-utils:claw-string)
@@ -4132,7 +4131,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN5ImGui12TextWrappedVEPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui12TextWrappedVEPKcPc"
                %imgui::im-gui+text-wrapped-v)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:490:29"
@@ -4186,7 +4185,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN5ImGui11TreeNodeExVEPKciS1_St9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui11TreeNodeExVEPKciS1_Pc"
                %imgui::im-gui+tree-node-ex-v)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:605:29"
@@ -4195,7 +4194,7 @@
               (%imgui::fmt claw-utils:claw-string)
               (%imgui::args %imgui::va-list))
 
-(iffi:defifun ("__claw__ZN5ImGui11TreeNodeExVEPKviPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui11TreeNodeExVEPKviPKcPc"
                %imgui::im-gui+tree-node-ex-v)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:606:29"
@@ -4204,7 +4203,7 @@
               (%imgui::fmt claw-utils:claw-string)
               (%imgui::args %imgui::va-list))
 
-(iffi:defifun ("__claw__ZN5ImGui9TreeNodeVEPKcS1_St9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui9TreeNodeVEPKcS1_Pc"
                %imgui::im-gui+tree-node-v)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:600:29"
@@ -4212,7 +4211,7 @@
               (%imgui::fmt claw-utils:claw-string)
               (%imgui::args %imgui::va-list))
 
-(iffi:defifun ("__claw__ZN5ImGui9TreeNodeVEPKvPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN5ImGui9TreeNodeVEPKvPKcPc"
                %imgui::im-gui+tree-node-v)
               :bool
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:601:29"
@@ -5020,7 +5019,7 @@
               (%imgui::fmt claw-utils:claw-string)
               &rest)
 
-(iffi:defifun ("__claw__ZN15ImGuiTextBuffer8appendfvEPKcSt9__va_list"
+(iffi:defifun ("__claw__ZN15ImGuiTextBuffer8appendfvEPKcPc"
                %imgui::appendfv)
               :void
               "/home/borodust/devel/repo/aw-projects/aw-imgui/src/lib/imgui/imgui.h:2106:25"

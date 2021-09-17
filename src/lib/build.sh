@@ -58,7 +58,10 @@ function build_android {
 
 function build_desktop {
     mkdir -p $BUILD_DIR && cd $BUILD_DIR
-    cmake $WORK_DIR
+    cmake -DCMAKE_C_COMPILER=clang \
+          -DCMAKE_CXX_COMPILER=clang++ \
+          -DCMAKE_SHARED_LINKER_FLAGS="-stdlib=libc++ -lc++abi" \
+          $WORK_DIR
     cmake --build .
 }
 

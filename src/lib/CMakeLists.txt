@@ -4,6 +4,11 @@ project(imgui.clawed)
 set(LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/imgui)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+# setup rpath
+set(CMAKE_SKIP_BUILD_RPATH FALSE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH "$\{ORIGIN\}")
+
 if (MSVC)
     add_compile_options(/O2)
     if (NOT ANDROID_ABI)

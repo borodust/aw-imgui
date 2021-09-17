@@ -14,7 +14,6 @@
   :mailto "dev@borodust.org"
   :license "MIT"
   :depends-on (:alexandria :cffi :cffi-c-ref :claw :claw-utils)
-  :pathname "src/"
   :serial t
-  :components ((:file "claw")
-               (:module :imgui-includes :pathname "lib/imgui/")))
+  :components ((:file "src/claw")
+               (:module :imgui-includes :pathname "src/lib/imgui/")))
